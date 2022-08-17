@@ -5,14 +5,14 @@
     <vendor>gkingf</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.gkingf.apidocgenerator.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.gkingf.apidocgenerator.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.gkingf.apidocgenerator.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="com.github.gkingf.apidocgenerator.action.ApiMdDocGeneratorAction"
+                class="com.github.gkingf.apidocgenerator.action.ApiMdDocGenerator"
+                text="Api Markdown Doc">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
+        </action>
+    </actions>
 </idea-plugin>
