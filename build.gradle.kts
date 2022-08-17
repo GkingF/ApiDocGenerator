@@ -23,6 +23,11 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+// https://mvnrepository.com/artifact/cn.hutool/hutool-all
+    implementation("cn.hutool:hutool-all:5.8.5")
+}
+
 // Set the JVM language level used to compile sources and generate files - Java 11 is required since 2020.3
 kotlin {
     jvmToolchain {
