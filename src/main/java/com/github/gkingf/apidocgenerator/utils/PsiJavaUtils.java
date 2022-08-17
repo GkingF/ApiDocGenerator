@@ -7,7 +7,7 @@ import com.intellij.psi.PsiJavaFile;
 
 import java.util.Objects;
 
-public class PsiJavaUtil {
+public class PsiJavaUtils {
 
     /**
      * 判断该PsiJavaFile是否包含RestController注解
