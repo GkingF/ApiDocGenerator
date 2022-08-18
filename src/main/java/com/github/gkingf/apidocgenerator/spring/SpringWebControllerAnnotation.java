@@ -1,11 +1,12 @@
 package com.github.gkingf.apidocgenerator.spring;
 
-public enum SpringWebAnnotation {
+public enum SpringWebControllerAnnotation {
+
     REST_CONTROLLER("org.springframework.web.bind.annotation.RestController");
 
     private final String qualifiedName;
 
-    SpringWebAnnotation(String qualifiedName) {
+    SpringWebControllerAnnotation(String qualifiedName) {
         this.qualifiedName = qualifiedName;
     }
 
