@@ -2,6 +2,10 @@ package com.github.gkingf.apidocgenerator.utils;
 
 import com.github.gkingf.apidocgenerator.views.ExportDialog;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.psi.PsiMethod;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ControllerParser {
 
@@ -13,6 +17,9 @@ public class ControllerParser {
 
         String classComments = interpreter.getClassComments();
 
-        ExportDialog.show(classComments);
+        List<PsiMethod> methods = interpreter.getMethods();
+        String methodComments = methods.stream().map(interpreter::getMethodDescription).collect(Collectors.joining("\n"));
+
+        ExportDialog.show(methodComments);
     }
 }
