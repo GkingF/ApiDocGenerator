@@ -6,7 +6,8 @@ public enum SpringWebMappingAnnotation {
     POST_MAPPING("POST", "org.springframework.web.bind.annotation.PostMapping"),
     PUT_MAPPING("PUT", "org.springframework.web.bind.annotation.PutMapping"),
     DELETE_MAPPING("DELETE", "org.springframework.web.bind.annotation.DeleteMapping"),
-    PATCH_MAPPING("PATCH", "org.springframework.web.bind.annotation.PatchMapping");
+    PATCH_MAPPING("PATCH", "org.springframework.web.bind.annotation.PatchMapping"),
+    REQUEST_MAPPING("REQUEST", "org.springframework.web.bind.annotation.RequestMapping");
 
     private final String qualifiedName;
     private final String shortName;
@@ -18,6 +19,10 @@ public enum SpringWebMappingAnnotation {
 
     public String getQualifiedName() {
         return qualifiedName;
+    }
+
+    public String getShortName() {
+        return shortName;
     }
 
     public static SpringWebMappingAnnotation byQualifiedName(String QualifiedName) {
